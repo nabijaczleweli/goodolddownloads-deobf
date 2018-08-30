@@ -26,7 +26,7 @@ function dec(key, ciphertext, n) {
       }
       i %= 26;
 
-      if (upperReference.indexOf(ciphertext[s]) != = -1)
+      if (upperReference.indexOf(ciphertext[s]) !== -1)
         output += upperReference[i];
       else
         output += lowerReference[i];
@@ -47,8 +47,12 @@ function full_dec(todec, dank, memes) {
   for (var a = 0; a < memes; ++a) {
     todec = dec(dank, todec);
   }
-  console.log(todec);
+  return todec;
 }
+
+
+let argv = process.argv.slice(2);
+console.log(full_dec(argv[0], parseInt(argv[1]), parseInt(argv[2])));
 
 
 // Example known-working cases:
