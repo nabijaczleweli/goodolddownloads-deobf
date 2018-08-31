@@ -52,7 +52,12 @@ function full_dec(todec, dank, memes) {
 
 
 let argv = process.argv.slice(2);
-console.log(full_dec(argv[0], parseInt(argv[1]), parseInt(argv[2])));
+
+let todec = argv[0];
+let dank = argv[1];
+let memes = parseInt(argv[2]);
+
+console.log(full_dec(todec, dank, memes));
 
 
 // Example known-working cases:
